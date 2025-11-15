@@ -1,4 +1,4 @@
-# 🧠 What Was I Doing?
+<!-- # 🧠 What Was I Doing?
 
 Never lose your train of thought when returning to code. This VS Code extension automatically tracks your work context and helps you resume exactly where you left off after breaks.
 
@@ -178,4 +178,4 @@ Found a bug or have a feature request? [Open an issue](https://github.com/your-u
 ---
 
 **Enjoy coding with better context awareness!** 🎉
-
+ -->
