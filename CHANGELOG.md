@@ -4,6 +4,21 @@ All notable changes to the "what-was-i-doing" extension will be documented in th
 
 **[📥 Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing)**
 
+## [1.0.2] - 2025-11-29
+
+### Added
+- 📖 Professional README with badges, tables, and improved formatting
+- 🎨 Enhanced marketplace presentation
+- ❓ FAQ section for common questions
+- 🔒 Detailed privacy and security information
+- 📋 Comprehensive configuration documentation
+
+### Improved
+- 🎯 Better use cases presentation with examples
+- 💡 Enhanced usage instructions with quick start guide
+- 📊 Improved feature descriptions with visual tables
+- 🔧 More detailed configuration options with examples
+
 ## [1.0.1] - 2025-11-29
 
 ### Added
@@ -11,7 +26,7 @@ All notable changes to the "what-was-i-doing" extension will be documented in th
 - 📖 Enhanced documentation with marketplace link
 
 ### Fixed
-- Fixed duplicate context detection logic
+- 🐛 Fixed duplicate context detection logic
 
 ## [1.0.0] - 2025-11-29
 
