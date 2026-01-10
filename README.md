@@ -9,6 +9,9 @@
 </p>
 
 <p align="center">
+  <a href="https://whatwasidoing.dev">
+    <img src="https://img.shields.io/badge/Website-whatwasidoing.dev-blue?style=for-the-badge&logo=google-chrome" alt="Website">
+  </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing">
     <img src="https://img.shields.io/visual-studio-marketplace/v/VanshSethi.what-was-i-doing?style=for-the-badge&logo=visual-studio-code&label=VS%20Code%20Marketplace" alt="VS Code Marketplace Version">
   </a>
@@ -24,6 +27,7 @@
 </p>
 
 <p align="center">
+  <a href="https://whatwasidoing.dev">🌐 Website</a> •
   <a href="#-features">Features</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-usage">Usage</a> •
