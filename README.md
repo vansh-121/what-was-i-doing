@@ -411,7 +411,8 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 ### Latest Version: 1.0.3
 
 - 💡 **NEW**: Automatic context notes generation
-- � **NEW**: Git awareness (branch, commit, uncommitted files)- 🎨 **NEW**: Beautiful styled webview popup with modern UI- �📝 Intelligent notes from TODO comments, function names, and file context
+- 🔀 **NEW**: Git awareness (branch, commit, uncommitted files)
+- 📝 Intelligent notes from TODO comments, function names, and file context
 - 🎯 Enhanced resume experience with prominent note display
 - 📋 Improved history quick pick with note descriptions
 - ✨ Professional extension icon
