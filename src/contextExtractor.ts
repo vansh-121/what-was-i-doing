@@ -214,10 +214,14 @@ export class ContextExtractor {
 
         // If there's a TODO comment, use it as the primary context
         if (todoComment) {
+            // Dynamically build regex from configured keywords
+            const keywordPattern = this.todoKeywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+            const todoRegex = new RegExp(`^(${keywordPattern}):\\s*`, 'i');
+
             if (functionName) {
-                return `${todoComment.replace(/^(TODO|FIXME|HACK|NOTE|BUG|XXX):\s*/i, '')} in ${functionName}`;
+                return `${todoComment.replace(todoRegex, '')} in ${functionName}`;
             }
-            return todoComment.replace(/^(TODO|FIXME|HACK|NOTE|BUG|XXX):\s*/i, '');
+            return todoComment.replace(todoRegex, '');
         }
 
         // If there's a function name, describe what you're working on

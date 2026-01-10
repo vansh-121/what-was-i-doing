@@ -24,6 +24,11 @@ export class StateManager {
             return false;
         }
 
+        // Different TODO comments mean different contexts (user added/changed a note)
+        if (ctx1.todoComment !== ctx2.todoComment) {
+            return false;
+        }
+
         // Same function name means same context (even if line changed slightly)
         if (ctx1.functionName && ctx2.functionName && ctx1.functionName === ctx2.functionName) {
             // If lines are within 10 lines of each other in the same function, consider it the same
