@@ -7,9 +7,9 @@ on:
       - master
     paths-ignore:
       - '**.md'
-      - '.github/**'
       - '.vscode/**'
       - '.gitignore'
+  workflow_dispatch:
 
 jobs:
   release:
