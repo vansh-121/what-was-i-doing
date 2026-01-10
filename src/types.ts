@@ -12,6 +12,14 @@ export interface WorkContext {
     functionName?: string;
     /** TODO/FIXME comment found near the cursor position */
     todoComment?: string;
+    /** Automatically generated note describing what you were working on */
+    note?: string;
+    /** Git branch name when context was saved */
+    gitBranch?: string;
+    /** Last commit message in the repository */
+    gitLastCommit?: string;
+    /** Number of uncommitted/modified files */
+    gitUncommittedFiles?: number;
     /** Timestamp when this context was saved */
     timestamp: number;
     /** Workspace folder path this context belongs to */

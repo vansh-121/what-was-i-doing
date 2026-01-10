@@ -19,23 +19,27 @@ export class StateManager {
      * Check if two contexts are essentially the same (to avoid duplicates)
      */
     private areContextsSame(ctx1: WorkContext, ctx2: WorkContext): boolean {
-        // Compare key properties
+        // Different files are always different
         if (ctx1.filePath !== ctx2.filePath) {
             return false;
         }
-        if (ctx1.line !== ctx2.line) {
-            return false;
-        }
-        if (ctx1.functionName !== ctx2.functionName) {
-            return false;
+
+        // Same function name means same context (even if line changed slightly)
+        if (ctx1.functionName && ctx2.functionName && ctx1.functionName === ctx2.functionName) {
+            // If lines are within 10 lines of each other in the same function, consider it the same
+            const lineDiff = Math.abs(ctx1.line - ctx2.line);
+            if (lineDiff <= 10) {
+                return true;
+            }
         }
 
-        // Compare TODO comments
-        if (ctx1.todoComment !== ctx2.todoComment) {
-            return false;
+        // If no function name, check if lines are very close (within 5 lines)
+        const lineDiff = Math.abs(ctx1.line - ctx2.line);
+        if (lineDiff <= 5) {
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     /**

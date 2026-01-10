@@ -61,7 +61,7 @@ Get back to work instantly with helpful context.
 
 - 📄 **Last Active File** - Jump to the exact file you were editing
 - 🔍 **Function/Method** - See the function or class you were in
-- 📝 **Next Steps** - View TODO/FIXME comments for context
+- � **Auto-Generated Notes** - Automatic context summary (e.g., "Fixing auth bug in login.ts")- 🔀 **Git Awareness** - Branch name, last commit, and uncommitted files count- �📝 **Next Steps** - View TODO/FIXME comments for context
 - ⏰ **Time Tracking** - Know how long you've been away
 
 </td>
@@ -142,6 +142,47 @@ Look for the **clock icon** (🕒) in your status bar:
 - Shows time since last activity (e.g., "2m ago", "1h ago")
 - Click it to quickly view your work history
 - Hover for tooltip with last active function/file
+
+### 💡 Automatic Context Notes
+
+The extension automatically generates helpful notes about what you were working on:
+
+**Examples:**
+```
+💡 Fixing auth bug in login.ts, need to check JWT expiry in Method: validateToken()
+💡 Working on Method: fetchUserData() in api.ts
+💡 Editing database.ts
+```
+
+These notes are generated from:
+- TODO/FIXME comments near your cursor
+- Function/method names you were editing
+- The file you were working in
+
+The notes appear in:
+- 🔔 Resume popup when you return
+- 📋 History quick pick menu
+- 🕒 Status bar tooltips
+
+### 🔀 Git Awareness
+
+The extension automatically captures Git context when saving your work:
+
+**Captured Information:**
+- 🌿 Branch name (e.g., `feature/auth-fix`)
+- 💬 Last commit message
+- 📝 Number of uncommitted files
+
+**Example Display:**
+```
+🔀 Branch: feature/auth-fix • Uncommitted files: 3
+💬 Last commit: feat: add JWT token validation
+```
+
+This helps you quickly understand:
+- What feature/fix you were working on
+- If you have uncommitted changes
+- The last stable point in your work
 
 ## ⚙️ Configuration
 
@@ -367,8 +408,12 @@ Press `F5` in VS Code to launch Extension Development Host.
 
 See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
-### Latest Version: 1.0.1
+### Latest Version: 1.0.3
 
+- 💡 **NEW**: Automatic context notes generation
+- � **NEW**: Git awareness (branch, commit, uncommitted files)- 🎨 **NEW**: Beautiful styled webview popup with modern UI- �📝 Intelligent notes from TODO comments, function names, and file context
+- 🎯 Enhanced resume experience with prominent note display
+- 📋 Improved history quick pick with note descriptions
 - ✨ Professional extension icon
 - 📖 Enhanced documentation
 - 🔄 Automatic activity tracking

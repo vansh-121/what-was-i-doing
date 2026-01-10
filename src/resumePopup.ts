@@ -7,27 +7,70 @@ import * as path from 'path';
  */
 export class ResumePopup {
     /**
-     * Show the resume work popup with context information
+     * Show a quiet notification when context is saved (non-intrusive)
+     */
+    public showSavedNotification(context: WorkContext): void {
+        const fileName = path.basename(context.filePath);
+        let message = `🧠 Context saved • 📄 ${fileName}`;
+
+        if (context.functionName) {
+            message += ` • ${context.functionName}`;
+        }
+
+        if (context.gitBranch) {
+            message += ` 🔀 ${context.gitBranch}`;
+        }
+
+        // Show as an information message that auto-dismisses (no buttons = non-intrusive)
+        vscode.window.showInformationMessage(message);
+
+        // Also show in status bar
+        vscode.window.setStatusBarMessage(message, 5000);
+    }
+
+    /**
+     * Show the resume work popup with notification banner style
+     * (Action-driven for when user returns)
      */
     public async show(context: WorkContext): Promise<void> {
-        const message = this.formatMessage(context);
+        const fileName = path.basename(context.filePath);
+        const timeAgo = this.formatTimeAgo(context.timestamp);
 
-        const continueButton = '✅ Continue';
-        const dismissButton = '✖ Dismiss';
-        const viewHistoryButton = '📋 View History';
+        // Build a clean, concise message
+        let message = `🧠 Welcome back! You were last active ${timeAgo}`;
 
-        const selection = await vscode.window.showInformationMessage(
+        // File and function on same line if both exist
+        if (context.functionName) {
+            message += `\n📄 ${fileName} → ${context.functionName}`;
+        } else {
+            message += `\n📄 ${fileName}`;
+        }
+
+        // Only show note if it contains TODO/FIXME comment (unique info)
+        if (context.todoComment) {
+            message += `\n📝 ${context.todoComment}`;
+        }
+
+        // Git branch and uncommitted files
+        if (context.gitBranch) {
+            const uncommitted = context.gitUncommittedFiles
+                ? ` • ${context.gitUncommittedFiles} uncommitted`
+                : '';
+            message += `\n🔀 ${context.gitBranch}${uncommitted}`;
+        }
+
+        // Show notification with action buttons
+        const result = await vscode.window.showInformationMessage(
             message,
             { modal: false },
-            continueButton,
-            viewHistoryButton,
-            dismissButton
+            '✅ Continue',
+            '📋 View History',
+            '✖ Dismiss'
         );
 
-        if (selection === continueButton) {
+        if (result === '✅ Continue') {
             await this.navigateToContext(context);
-        } else if (selection === viewHistoryButton) {
-            // Command will be handled by extension
+        } else if (result === '📋 View History') {
             await vscode.commands.executeCommand('whatWasIDoing.showHistory');
         }
     }
@@ -91,12 +134,41 @@ export class ResumePopup {
         let message = `🧠 Welcome back! You were last active ${timeAgo}\n`;
         message += `📄 File: ${fileName}`;
 
+        // Show the auto-generated note prominently
+        if (context.note) {
+            message += `\n💡 ${context.note}`;
+        }
+
         if (context.functionName) {
-            message += `\n🔍 Editing: ${context.functionName}`;
+            message += `\n🔍 Location: ${context.functionName}`;
         }
 
         if (context.todoComment) {
-            message += `\n📝 Next step: ${context.todoComment}`;
+            message += `\n📝 ${context.todoComment}`;
+        }
+
+        // Show Git information
+        if (context.gitBranch || context.gitLastCommit || context.gitUncommittedFiles) {
+            const gitParts: string[] = [];
+
+            if (context.gitBranch) {
+                gitParts.push(`Branch: ${context.gitBranch}`);
+            }
+
+            if (context.gitUncommittedFiles !== undefined && context.gitUncommittedFiles > 0) {
+                gitParts.push(`Uncommitted files: ${context.gitUncommittedFiles}`);
+            }
+
+            if (gitParts.length > 0) {
+                message += `\n🔀 ${gitParts.join(' • ')}`;
+            }
+
+            if (context.gitLastCommit) {
+                const shortCommit = context.gitLastCommit.length > 50
+                    ? context.gitLastCommit.substring(0, 50) + '...'
+                    : context.gitLastCommit;
+                message += `\n💬 Last commit: ${shortCommit}`;
+            }
         }
 
         return message;
@@ -136,12 +208,30 @@ export class ResumePopup {
             return;
         }
 
-        const items = contexts.map(ctx => ({
-            label: `$(file) ${path.basename(ctx.filePath)}`,
-            description: ctx.functionName || `Line ${ctx.line + 1}`,
-            detail: `${this.formatTimeAgo(ctx.timestamp)}${ctx.todoComment ? ` • ${ctx.todoComment}` : ''}`,
-            context: ctx,
-        }));
+        const items = contexts.map(ctx => {
+            // Build detail string with time, TODO, and git info
+            const detailParts: string[] = [this.formatTimeAgo(ctx.timestamp)];
+
+            if (ctx.todoComment) {
+                detailParts.push(ctx.todoComment);
+            }
+
+            if (ctx.gitBranch) {
+                const gitInfo = ctx.gitBranch;
+                if (ctx.gitUncommittedFiles !== undefined && ctx.gitUncommittedFiles > 0) {
+                    detailParts.push(`🔀 ${gitInfo} (${ctx.gitUncommittedFiles} uncommitted)`);
+                } else {
+                    detailParts.push(`🔀 ${gitInfo}`);
+                }
+            }
+
+            return {
+                label: `$(file) ${path.basename(ctx.filePath)}`,
+                description: ctx.note || ctx.functionName || `Line ${ctx.line + 1}`,
+                detail: detailParts.join(' • '),
+                context: ctx,
+            };
+        });
 
         const selected = await vscode.window.showQuickPick(items, {
             placeHolder: 'Select a previous work context to resume',
