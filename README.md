@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" alt="What Was I Doing Logo" width="120" height="120">
+  <img src="https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/icon.png" alt="What Was I Doing Logo" width="120" height="120">
 </p>
 
 <h1 align="center">What Was I Doing?</h1>
@@ -21,8 +21,8 @@
   <a href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing">
     <img src="https://img.shields.io/visual-studio-marketplace/r/VanshSethi.what-was-i-doing?style=for-the-badge&logo=visual-studio-code" alt="Rating">
   </a>
-  <a href="https://github.com/vansh-121/What-Was-I-Doing-Extension/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/vansh-121/What-Was-I-Doing-Extension?style=for-the-badge" alt="License">
+  <a href="https://github.com/vansh-121/what-was-i-doing/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/vansh-121/what-was-i-doing?style=for-the-badge" alt="License">
   </a>
 </p>
 
@@ -339,7 +339,7 @@ Clear history anytime with one command
 ✅ **Open Source**
 </td>
 <td>
-<a href="https://github.com/vansh-121/What-Was-I-Doing-Extension">Fully auditable code on GitHub</a>
+<a href="https://github.com/vansh-121/what-was-i-doing">Fully auditable code on GitHub</a>
 </td>
 </tr>
 </table>
@@ -381,8 +381,8 @@ Yes! Activity tracking works with all languages. Function name detection works b
 ### Building from Source
 
 ```bash
-git clone https://github.com/vansh-121/What-Was-I-Doing-Extension
-cd What-Was-I-Doing-Extension
+git clone https://github.com/vansh-121/what-was-i-doing
+cd what-was-i-doing
 npm install
 npm run compile
 ```
@@ -406,7 +406,7 @@ Press `F5` in VS Code to launch Extension Development Host.
 | Very large files (>1MB) may have slower extraction | Excluded by default in most cases |
 | Function detection in complex nested structures | Still captures file and line number |
 
-**Found a bug?** [Report it here](https://github.com/vansh-121/What-Was-I-Doing-Extension/issues/new?labels=bug) 🐛
+**Found a bug?** [Report it here](https://github.com/vansh-121/what-was-i-doing/issues/new?labels=bug) 🐛
 
 ## 📊 Release Notes
 
@@ -429,16 +429,16 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
 Contributions, issues, and feature requests are welcome!
 
-- 🐛 [Report a Bug](https://github.com/vansh-121/What-Was-I-Doing-Extension/issues/new?labels=bug)
-- 💡 [Request a Feature](https://github.com/vansh-121/What-Was-I-Doing-Extension/issues/new?labels=enhancement)
+- 🐛 [Report a Bug](https://github.com/vansh-121/what-was-i-doing/issues/new?labels=bug)
+- 💡 [Request a Feature](https://github.com/vansh-121/what-was-i-doing/issues/new?labels=enhancement)
 - 📖 [Read Contributing Guidelines](CONTRIBUTING.md)
 
 ### Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/vansh-121/What-Was-I-Doing-Extension.git
-cd What-Was-I-Doing-Extension
+git clone https://github.com/vansh-121/what-was-i-doing.git
+cd what-was-i-doing
 
 # Install dependencies
 npm install
@@ -462,7 +462,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
   <a href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing">
     <img src="https://img.shields.io/badge/⭐-Rate%20this%20extension-blue?style=for-the-badge" alt="Rate Extension">
   </a>
-  <a href="https://github.com/vansh-121/What-Was-I-Doing-Extension/issues">
+  <a href="https://github.com/vansh-121/what-was-i-doing/issues">
     <img src="https://img.shields.io/badge/🐛-Report%20Issue-red?style=for-the-badge" alt="Report Issue">
   </a>
 </p>
@@ -481,7 +481,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 </p>
 
 <p align="center">
+  <a href="https://whatwasidoing.dev">Website</a> •
   <a href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing">VS Code Marketplace</a> •
-  <a href="https://github.com/vansh-121/What-Was-I-Doing-Extension">GitHub Repository</a> •
-  <a href="https://github.com/vansh-121/What-Was-I-Doing-Extension/issues">Report Issues</a>
+  <a href="https://github.com/vansh-121/what-was-i-doing">GitHub Repository</a> •
+  <a href="https://github.com/vansh-121/what-was-i-doing/issues">Report Issues</a>
 </p>

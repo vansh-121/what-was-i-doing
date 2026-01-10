@@ -11,10 +11,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vansh-121/What-Was-I-Doing-Extension"
+    "url": "https://github.com/vansh-121/what-was-i-doing"
   },
   "bugs": {
-    "url": "https://github.com/vansh-121/What-Was-I-Doing-Extension/issues"
+    "url": "https://github.com/vansh-121/what-was-i-doing/issues"
   },
   "homepage": "https://whatwasidoing.dev",
   "keywords": [
