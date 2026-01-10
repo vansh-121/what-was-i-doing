@@ -408,16 +408,14 @@ Press `F5` in VS Code to launch Extension Development Host.
 
 See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
-### Latest Version: 1.0.3
+### Latest Version: 1.0.4
 
-- 💡 **NEW**: Automatic context notes generation
-- 🔀 **NEW**: Git awareness (branch, commit, uncommitted files)
+- 🐛 **FIXED**: Custom TODO keywords now properly respected in note generation
+- 🐛 **FIXED**: TODO comment changes now correctly trigger new context saves
+- 💡 Automatic context notes generation
+- 🔀 Git awareness (branch, commit, uncommitted files)
 - 📝 Intelligent notes from TODO comments, function names, and file context
 - 🎯 Enhanced resume experience with prominent note display
-- 📋 Improved history quick pick with note descriptions
-- ✨ Professional extension icon
-- 📖 Enhanced documentation
-- 🔄 Automatic activity tracking
 - ⏰ Smart idle detection
 - 🎯 Instant resume popup
 - 📋 Work session history

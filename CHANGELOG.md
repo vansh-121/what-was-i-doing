@@ -4,6 +4,16 @@ All notable changes to the "what-was-i-doing" extension will be documented in th
 
 **[📥 Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing)**
 
+## [1.0.4] - 2026-01-10
+
+### Fixed
+- 🐛 **Custom TODO Keywords** - Fixed regex for stripping TODO keywords to use configurable `todoKeywords` setting instead of hardcoded list
+  - Now properly respects user-defined TODO keywords from settings
+  - Dynamically builds regex pattern from configured keywords
+- 🐛 **TODO Comment Detection** - Restored `todoComment` comparison in context change detection
+  - Adding or changing TODO/FIXME comments now correctly creates a new context entry
+  - Prevents missing important context changes when developers update TODO notes
+
 ## [1.0.3] - 2026-01-10
 
 ### Added
