@@ -41,9 +41,31 @@
 
 **What Was I Doing?** is a VS Code extension that automatically tracks your work context and helps you resume exactly where you left off after breaks. Perfect for developers who switch between tasks, take coffee breaks, or need to context-switch frequently.
 
-## 🎬 Demo
+## 🎬 See It In Action
 
-![What Was I Doing Demo](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/feat/v1.0.5/assets/clips/Clip1.gif)
+### 🚀 Quick Start: Install and Get Started
+
+Get up and running in seconds:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif" alt="Installing What Was I Doing Extension" width="800">
+</p>
+
+<p align="center">
+  <em>Install from VS Code Marketplace and the extension automatically starts tracking your work context</em>
+</p>
+
+### ⏰ Track Your Work Timeline
+
+Never lose track of when you last worked on something. See exactly what you were doing 50 minutes ago, or even yesterday:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip2.gif" alt="Work History Timeline Feature" width="800">
+</p>
+
+<p align="center">
+  <em>View your complete work history with timestamps — "What was I working on 50 min ago?" is answered instantly</em>
+</p>
 
 ## ✨ Features
 
