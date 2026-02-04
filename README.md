@@ -47,25 +47,17 @@
 
 Get up and running in seconds:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif" alt="Installing What Was I Doing Extension" width="800">
-</p>
+![Installing What Was I Doing Extension](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif)
 
-<p align="center">
-  <em>Install from VS Code Marketplace and the extension automatically starts tracking your work context</em>
-</p>
+*Install from VS Code Marketplace and the extension automatically starts tracking your work context*
 
 ### ⏰ Track Your Work Timeline
 
 Never lose track of when you last worked on something. See exactly what you were doing 50 minutes ago, or even yesterday:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip2.gif" alt="Work History Timeline Feature" width="800">
-</p>
+![Work History Timeline Feature](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip2.gif)
 
-<p align="center">
-  <em>View your complete work history with timestamps — "What was I working on 50 min ago?" is answered instantly</em>
-</p>
+*View your complete work history with timestamps — "What was I working on 50 min ago?" is answered instantly*
 
 ## ✨ Features
 
