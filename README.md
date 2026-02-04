@@ -43,7 +43,7 @@
 
 ## 🎬 Demo
 
-![What Was I Doing Demo](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif)
+![What Was I Doing Demo](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/feat/v1.0.5/assets/clips/Clip1.gif)
 
 ## ✨ Features
 
