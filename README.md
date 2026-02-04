@@ -59,6 +59,30 @@ Never lose track of when you last worked on something. See exactly what you were
 
 *View your complete work history with timestamps — "What was I working on 50 min ago?" is answered instantly*
 
+### 📜 Browse Complete Work History
+
+Access all your previous work sessions and jump back to any context with a single click:
+
+![Complete Work History View](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip3.gif)
+
+*Browse through all your saved work contexts and click any session to instantly resume from that exact point*
+
+### 🎯 Command Palette Integration
+
+Quick access to all extension features directly from the Command Palette:
+
+![Command Palette Features](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip4.gif)
+
+*Search "What Was I Doing" in the Command Palette to see all available commands and features at your fingertips*
+
+### ⚙️ Customize to Your Workflow
+
+Configure the extension to match your preferences — adjust popup behavior, idle timeout, history size, file exclusions, and more:
+
+![Extension Settings Configuration](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip5.gif)
+
+*Fine-tune settings like popup display, idle timeout minutes, max history size, exclude patterns, and other options to fit your workflow perfectly*
+
 ## ✨ Features
 
 <table>
