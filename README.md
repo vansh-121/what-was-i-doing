@@ -41,6 +41,10 @@
 
 **What Was I Doing?** is a VS Code extension that automatically tracks your work context and helps you resume exactly where you left off after breaks. Perfect for developers who switch between tasks, take coffee breaks, or need to context-switch frequently.
 
+## 🎬 Demo
+
+![What Was I Doing Demo](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif)
+
 ## ✨ Features
 
 <table>
