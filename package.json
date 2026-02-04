@@ -2,7 +2,7 @@
   "name": "what-was-i-doing",
   "displayName": "What Was I Doing?",
   "description": "Automatically tracks your work context and helps you resume exactly where you left off after breaks",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "VanshSethi",
   "author": {
     "name": "Vansh Sethi"
@@ -70,7 +70,7 @@
         },
         "whatWasIDoing.maxHistorySize": {
           "type": "number",
-          "default": 10,
+          "default": 30,
           "minimum": 1,
           "maximum": 50,
           "description": "Maximum number of work sessions to keep in history"

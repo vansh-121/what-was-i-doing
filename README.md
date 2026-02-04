@@ -5,7 +5,7 @@
 <h1 align="center">What Was I Doing?</h1>
 
 <p align="center">
-  <strong>Never lose your train of thought when returning to code</strong>
+  <strong>Never Lose Your Coding Context</strong>
 </p>
 
 <p align="center">
@@ -40,6 +40,48 @@
 ## 📖 About
 
 **What Was I Doing?** is a VS Code extension that automatically tracks your work context and helps you resume exactly where you left off after breaks. Perfect for developers who switch between tasks, take coffee breaks, or need to context-switch frequently.
+
+## 🎬 See It In Action
+
+### 🚀 Quick Start: Install and Get Started
+
+Get up and running in seconds:
+
+![Installing What Was I Doing Extension](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip1.gif)
+
+*Install from VS Code Marketplace and the extension automatically starts tracking your work context*
+
+### ⏰ Track Your Work Timeline
+
+Never lose track of when you last worked on something. See exactly what you were doing 50 minutes ago, or even yesterday:
+
+![Work History Timeline Feature](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip2.gif)
+
+*View your complete work history with timestamps — "What was I working on 50 min ago?" is answered instantly*
+
+### 📜 Browse Complete Work History
+
+Access all your previous work sessions and jump back to any context with a single click:
+
+![Complete Work History View](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip3.gif)
+
+*Browse through all your saved work contexts and click any session to instantly resume from that exact point*
+
+### 🎯 Command Palette Integration
+
+Quick access to all extension features directly from the Command Palette:
+
+![Command Palette Features](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip4.gif)
+
+*Search "What Was I Doing" in the Command Palette to see all available commands and features at your fingertips*
+
+### ⚙️ Customize to Your Workflow
+
+Configure the extension to match your preferences — adjust popup behavior, idle timeout, history size, file exclusions, and more:
+
+![Extension Settings Configuration](https://raw.githubusercontent.com/vansh-121/what-was-i-doing/master/assets/clips/Clip5.gif)
+
+*Fine-tune settings like popup display, idle timeout minutes, max history size, exclude patterns, and other options to fit your workflow perfectly*
 
 ## ✨ Features
 
@@ -218,12 +260,12 @@ Minutes of inactivity before context is automatically saved.
 Maximum number of work sessions to keep in history.
 
 - **Type**: `number`
-- **Default**: `10`
+- **Default**: `30`
 - **Range**: 1-50
 
 ```json
 {
-  "whatWasIDoing.maxHistorySize": 20
+  "whatWasIDoing.maxHistorySize": 30
 }
 ```
 
@@ -412,7 +454,7 @@ Press `F5` in VS Code to launch Extension Development Host.
 
 See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
-### Latest Version: 1.0.4
+### Latest Version: 1.0.5
 
 - 🐛 **FIXED**: Custom TODO keywords now properly respected in note generation
 - 🐛 **FIXED**: TODO comment changes now correctly trigger new context saves

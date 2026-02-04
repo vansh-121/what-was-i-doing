@@ -10,7 +10,7 @@ export class StateManager {
     private context: vscode.ExtensionContext;
     private maxHistorySize: number;
 
-    constructor(context: vscode.ExtensionContext, maxHistorySize: number = 10) {
+    constructor(context: vscode.ExtensionContext, maxHistorySize: number = 30) {
         this.context = context;
         this.maxHistorySize = maxHistorySize;
     }
