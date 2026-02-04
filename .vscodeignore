@@ -3,6 +3,7 @@
 out/**
 node_modules/**
 src/**
+assets/clips/**
 .gitignore
 .yarnrc
 esbuild.js
