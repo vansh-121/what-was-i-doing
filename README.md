@@ -454,7 +454,7 @@ Press `F5` in VS Code to launch Extension Development Host.
 
 See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
-### Latest Version: 1.0.4
+### Latest Version: 1.0.5
 
 - 🐛 **FIXED**: Custom TODO keywords now properly respected in note generation
 - 🐛 **FIXED**: TODO comment changes now correctly trigger new context saves
